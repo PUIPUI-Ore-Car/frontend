@@ -9,7 +9,7 @@ import { useEffect } from 'react'
 import axios from 'axios'
 
 export default function Monitor (props) {
-  const url = 'https://puipui-orecar.vercel.app/api/'
+  const url = '/api/'
 
   const [temp, updateTemp] = useState('--')
   const [humidity, updateHumidity] = useState('--')
