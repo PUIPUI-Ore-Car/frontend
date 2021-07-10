@@ -16,7 +16,7 @@ export default function Monitor (props) {
   const [ssid, updateSsid] = useState('--')
   const [ipAddr, updateIpAddr] = useState('--')
   const [odoCount, updateOdoCount] = useState('--')
-  const [latestDate, updateLatestDate] = useState('--')
+  // const [latestDate, updateLatestDate] = useState('--')
 
   useEffect(() => {
     axios.get(url).then((response) => {
@@ -29,7 +29,7 @@ export default function Monitor (props) {
       updateSsid(data.ssid)
       updateIpAddr(data.ipAddr)
       updateOdoCount(data.odo)
-      updateLatestDate(data.time)
+      // updateLatestDate(data.time)
     })
   }, [])
   return (
