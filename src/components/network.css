@@ -1,0 +1,26 @@
+.monitor > .wrapper > .rightSection > .network {
+  border: 2px solid #323232;
+  box-sizing: border-box;
+  border-radius: 0.5em;
+  display: flexbox;
+  margin-bottom: 10px;
+}
+
+.monitor > .wrapper > .rightSection > .network > .wrapper {
+  padding-block: 20px;
+  padding-inline: 25px;
+  width: 480px;
+}
+
+.monitor > .wrapper > .rightSection > .network > .wrapper > .networkTitle {
+  font-size: 15pt;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.monitor > .wrapper > .rightSection > .network > .wrapper > .networkData {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}

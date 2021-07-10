@@ -1,0 +1,20 @@
+.monitor {
+  border: 20px solid #656273;
+  width: 90%;
+  box-sizing: border-box;
+  border-radius: 2em;
+  background-color: rgba(108, 134, 1, 71%);
+  height: 100%;
+}
+
+.monitor > .wrapper {
+  position: relative;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 95%;
+  justify-content: space-around;
+  align-items: stretch;
+}

@@ -1,0 +1,7 @@
+{
+  "rewrites": [
+    { "source":  "http://140.227.239.47/",
+      "destination": "https://puipui-orecar.vercel.app/api/"
+    }
+  ]
+}
