@@ -12,7 +12,7 @@ export default function Graph (props) {
 
   const data = []
 
-  for(let i = 4; i >= 0; i--){
+  for(let i = time.length - 1; i >= time.length - 6; i--){
     const tmp = {time: time[i*100], 温度: temp[i*100], 湿度: humi[i*100]}
     data.push(tmp)
   }
