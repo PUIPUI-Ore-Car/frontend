@@ -21,7 +21,7 @@ export default function Graph (props) {
   return (
     <div className="graph">
       <div className="wrapper">
-        <p className="graphTitle">俺カーが接続中のネットワーク情報</p>
+        <p className="graphTitle">温湿度履歴</p>
         <div style={{textAlign: 'center', marginTop: 30}}>
           <ResponsiveContainer width="100%" height={300}>
             <LineChart data={data} margin={{ top: 5, right: 20, bottom: 5, left: 0}}>
