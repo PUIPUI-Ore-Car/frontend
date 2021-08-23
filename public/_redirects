@@ -1,1 +1,2 @@
-/api/   http://140.227.239.47/    200
+/api/             http://140.227.239.47/                  200
+/api/getAllData/  http://140.227.239.47/getAllData.php    200

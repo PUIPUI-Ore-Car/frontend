@@ -3,6 +3,7 @@ import './monitor.css'
 import Temp from './temp'
 import Network from './network'
 import Odo from './odo'
+import Graph from './graph'
 
 import { useState } from 'react'
 import { useEffect } from 'react'
@@ -10,6 +11,7 @@ import axios from 'axios'
 
 export default function Monitor (props) {
   const url = '/api/'
+  const allDataUrl = '/api/getAllData/'
 
   const [temp, updateTemp] = useState('--')
   const [humidity, updateHumidity] = useState('--')
@@ -17,6 +19,9 @@ export default function Monitor (props) {
   const [ipAddr, updateIpAddr] = useState('--')
   const [odoCount, updateOdoCount] = useState('--')
   const [latestDate, updateLatestDate] = useState(<span style={{paddingLeft: 3, textDecoration: 'bold'}}>情報を取得しています……</span>)
+  const [tempList, setTempList] = useState([])
+  const [humiList, setHumiList] = useState([])
+  const [timeList, setTimeList] = useState([])
 
   const fetchData = () => {
     axios.get(url).then((response) => {
@@ -32,11 +37,23 @@ export default function Monitor (props) {
       updateLatestDate(data.time)
     })
   }
+  const fetchAllData = () => {
+    axios.get(allDataUrl).then((response) => {
+      // 取得成功時
+      console.log("取得成功", response.data)
+      const data = response.data
+
+      setTempList(data.temp)
+      setHumiList(data.humidity)
+      setTimeList(data.time)
+    })
+  }
 
   useEffect(() => {
     // 初回フェッチ
     console.log('初回フェッチ')
     fetchData()
+    fetchAllData()
 
     // 数秒おきに取得する
     setInterval(() => {
@@ -55,6 +72,7 @@ export default function Monitor (props) {
           <Odo odo={odoCount} />
         </div>
       </div>
+      <Graph temp={tempList} humi={humiList} time={timeList} />
     </div>
     </>
   )
