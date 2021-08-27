@@ -67,7 +67,7 @@ export default function Monitor (props) {
     <div className="monitor">
       <div className="wrapper">
         <Temp temp={temp} humidity={humidity} />
-        <div className="rightSection">
+        <div className="rightSection" style={{flexGrow: 1, marginLeft: 5}}>
           <Network ssid={ssid} ip={ipAddr} />
           <Odo odo={odoCount} />
         </div>
