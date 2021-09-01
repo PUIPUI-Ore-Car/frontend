@@ -63,7 +63,7 @@ export default function Monitor (props) {
   }, [])
   return (
     <>
-    <p style={{padding: 5, fontSize: 10}}>最終更新:{latestDate}</p>
+    {/* <p style={{padding: 5, fontSize: 10}}>最終更新:{latestDate}</p> */}
     <div className="monitor">
       <div className="wrapper">
         <Temp temp={temp} humidity={humidity} />
