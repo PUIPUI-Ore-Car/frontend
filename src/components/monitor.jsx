@@ -18,7 +18,7 @@ export default function Monitor (props) {
   const [ssid, updateSsid] = useState('--')
   const [ipAddr, updateIpAddr] = useState('--')
   const [odoCount, updateOdoCount] = useState('--')
-  const [latestDate, updateLatestDate] = useState(<span style={{paddingLeft: 3, textDecoration: 'bold'}}>情報を取得しています……</span>)
+  // const [latestDate, updateLatestDate] = useState(<span style={{paddingLeft: 3, textDecoration: 'bold'}}>情報を取得しています……</span>)
   const [tempList, setTempList] = useState([])
   const [humiList, setHumiList] = useState([])
   const [timeList, setTimeList] = useState([])
@@ -34,7 +34,7 @@ export default function Monitor (props) {
       updateSsid(data.ssid)
       updateIpAddr(data.ipAddr)
       updateOdoCount(data.odo)
-      updateLatestDate(data.time)
+      // updateLatestDate(data.time)
     })
   }
   const fetchAllData = () => {
